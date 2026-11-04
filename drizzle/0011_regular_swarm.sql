@@ -1,0 +1,1 @@
+ALTER TABLE `ui_interactions` ADD `submission_id` text;

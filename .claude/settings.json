@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sS -i --max-time 15 https://fde.n.baidu-int.com/api/auth/me)",
+      "Bash(pm2 logs:*)",
+      "Bash(find /home/work/baidu/personal-code/pi-agent -maxdepth 3 -name *.db* -o -maxdepth 3 -name *.sqlite*)",
+      "Bash(sqlite3 data/platform.sqlite \".tables\")",
+      "Bash(echo \"exit: $?\")",
+      "Bash(node -e \"const Database=require\\(''/home/work/baidu/personal-code/pi-agent/node_modules/better-sqlite3''\\);const db=new Database\\(''/home/work/baidu/personal-code/pi-agent/data/platform.sqlite'',{readonly:true}\\);console.log\\(''users:'',db.prepare\\(''SELECT COUNT\\(*\\) c FROM users''\\).get\\(\\)\\);console.log\\(''workspaces:'',db.prepare\\(''SELECT COUNT\\(*\\) c FROM workspaces''\\).get\\(\\)\\);console.log\\(''members:'',db.prepare\\(''SELECT COUNT\\(*\\) c FROM workspace_members''\\).get\\(\\)\\)\")",
+      "Bash(node -e \"const Database=require\\(''/home/work/baidu/personal-code/pi-agent/node_modules/better-sqlite3''\\);const db=new Database\\(''/home/work/baidu/personal-code/pi-agent/data/platform.sqlite'',{readonly:true}\\);console.log\\(JSON.stringify\\(db.prepare\\(''SELECT id, username, name, created_at FROM users''\\).all\\(\\),null,1\\)\\);console.log\\(JSON.stringify\\(db.prepare\\(''SELECT id, slug, name FROM workspaces''\\).all\\(\\),null,1\\)\\);console.log\\(JSON.stringify\\(db.prepare\\(''SELECT * FROM workspace_members''\\).all\\(\\),null,1\\)\\)\")",
+      "Bash(curl -s -o /dev/null -w '%{http_code}\\\\n' -X POST -H 'Origin: https://fde.n.baidu-int.com' -H 'content-type: application/json' -d '{}' http://localhost:8166/api/workspaces/ws/agents)",
+      "Bash(curl -s -o /dev/null -w '%{http_code}\\\\n' -X POST -d '{}' http://localhost:8166/api/workspaces/ws/agents)",
+      "Bash(node --env-file=/home/work/baidu/personal-code/pi-agent/.env -e \"console.log\\(''APP_ORIGIN='' + process.env.APP_ORIGIN\\)\")",
+      "Bash(npx drizzle-kit:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npx tsr:*)",
+      "Bash(grep -rn \"AlertDialog\\\\b\\\\|<select\" src/components --include=*.tsx)",
+      "Bash(npx vitest:*)",
+      "Bash(npx eslint:*)",
+      "Bash(npx prettier:*)",
+      "Bash(git stash:*)",
+      "Bash(FILES=\"src/server/platform/agent-api-token.server.ts src/server/http/open-api-http.server.ts src/server/http/open-api-http.server.test.ts src/server/http/chat-http.server.ts src/server/runtime/chat.server.ts src/server/env.server.ts src/db/schema.ts src/components/agents/agent-api-tokens-panel.tsx src/lib/api/platform-client.ts src/routes/api/open/chat/$agentId.ts src/routes/api/agents/$agentId/api-tokens.ts src/routes/api/agents/$agentId/api-tokens/$tokenId.ts src/routes/w.$workspaceSlug.agents.$agentId.channels.tsx\")",
+      "Bash(git diff:*)",
+      "Bash(node --env-file=.env -e \":*)",
+      "Bash(ls drizzle/*.sql)"
+    ]
+  }
+}

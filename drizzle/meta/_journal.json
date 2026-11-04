@@ -1,0 +1,97 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1792398837468,
+      "tag": "0000_glossy_sinister_six",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1792400481408,
+      "tag": "0001_puzzling_mystique",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1792402553240,
+      "tag": "0002_sloppy_cardiac",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1792403900307,
+      "tag": "0003_flowery_franklin_richards",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1792404758462,
+      "tag": "0004_curious_jean_grey",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1792405164754,
+      "tag": "0005_hesitant_doomsday",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1792462103702,
+      "tag": "0006_nostalgic_paper_doll",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1792464856651,
+      "tag": "0007_tan_mentallo",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1792472412788,
+      "tag": "0008_daily_molly_hayes",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "6",
+      "when": 1792473755070,
+      "tag": "0009_flippant_giant_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "6",
+      "when": 1792480492177,
+      "tag": "0010_talented_swordsman",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "6",
+      "when": 1792480568718,
+      "tag": "0011_regular_swarm",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "6",
+      "when": 1792732159290,
+      "tag": "0012_agent_api_tokens",
+      "breakpoints": true
+    }
+  ]
+}

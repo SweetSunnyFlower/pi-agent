@@ -1,0 +1,1 @@
+ALTER TABLE `inbound_events` ADD `attachments_json` text DEFAULT '[]' NOT NULL;

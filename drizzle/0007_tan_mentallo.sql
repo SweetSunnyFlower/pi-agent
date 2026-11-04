@@ -1,0 +1,1 @@
+ALTER TABLE `agent_versions` ADD `change_baseline_json` text DEFAULT '{}' NOT NULL;

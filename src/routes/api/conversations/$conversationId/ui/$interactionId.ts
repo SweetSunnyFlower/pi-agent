@@ -1,0 +1,31 @@
+import { createFileRoute } from '@tanstack/react-router'
+
+import { getDatabase } from '#/db'
+import { getServerEnv } from '#/server/env.server'
+import { postConversationUiHandler } from '#/server/http/chat-http.server'
+import { getPiRuntime } from '#/server/runtime/pi-runtime.server'
+
+export const Route = createFileRoute(
+  '/api/conversations/$conversationId/ui/$interactionId',
+)({
+  server: {
+    handlers: {
+      POST: async ({ request, params }) => {
+        const workspaceId = new URL(request.url).searchParams.get('workspaceId')
+        if (!workspaceId) {
+          return Response.json({ error: 'workspace_required' }, { status: 400 })
+        }
+        const runtime = await getPiRuntime()
+        return postConversationUiHandler(request, {
+          db: getDatabase(),
+          env: getServerEnv(),
+          workspaceId,
+          conversationId: params.conversationId,
+          harness: runtime.harness,
+          registry: runtime.registry,
+          models: runtime.models,
+        })
+      },
+    },
+  },
+})
